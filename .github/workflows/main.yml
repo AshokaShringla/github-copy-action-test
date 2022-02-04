@@ -23,6 +23,10 @@ jobs:
         
       - name: check location
         run: pwd
+        
+      - name: find files
+        run: | 
+          cd .. && ls -a
     
 #       - name: copy command
 #         run: |
