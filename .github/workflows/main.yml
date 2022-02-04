@@ -20,6 +20,6 @@ jobs:
        uses: ShreyamMaity/Copy-Paste-Action@V2.0
        with:
           TOKEN: ${{ secrets.TOKEN }}
-          REPOSITORY : 'https://github.com/AshokaShringla/github-copy-action-test'
+          REPOSITORY : 'github-copy-action-test'
           COPY-FILE-LOCATION : './README.md'
           PASTE-FILE-LOCATION : './instructions.md'
