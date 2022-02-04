@@ -20,7 +20,10 @@ jobs:
         
       - name: check dir
         run: ls -a
+        
+      - name: check location
+        run: pwd
     
-      - name: copy command
-        run: |
-          rm instructions.md && cp README.md instructions.md
+#       - name: copy command
+#         run: |
+#           rm instructions.md && cp README.md instructions.md
