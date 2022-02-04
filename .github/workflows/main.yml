@@ -14,12 +14,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - name: Copy Paste Action
-       uses: ShreyamMaity/Copy-Paste-Action@V2.0
-       with:
-          TOKEN: ${{ secrets.TOKEN }}
-          REPOSITORY : 'github-copy-action-test'
-          COPY-FILE-LOCATION : './README.md'
-          PASTE-FILE-LOCATION : './instructions.md'
+      - name: hi
+        run: echo hello world
+        
+      - name: check dir
+        run: ls -a
+    
+      - name: copy command
+        run: |
+          rm instructions.md && cp README.md instructions.md
