@@ -36,3 +36,4 @@ jobs:
       - name: copy command
         run: |
           rm instructions.md && cp README.md instructions.md
+      - run: cat instructions.md
