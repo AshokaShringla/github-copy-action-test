@@ -15,15 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: hi
-        run: echo hello world
-        
-      - name: check dir
-        run: ls -a
-        
-      - name: check location
-        run: pwd
-        
       - name: Check out repository code
         uses: actions/checkout@v2
         
@@ -37,3 +28,10 @@ jobs:
         run: |
           rm instructions.md && cp README.md instructions.md
       - run: cat instructions.md
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          branch: ${{ github.ref }}
+
